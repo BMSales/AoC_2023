@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-
 void Array_Create(char **array){
 	(*array) = (char*)calloc(2, sizeof(char));
 }
@@ -31,12 +30,10 @@ int main(){
 
 		if(symbol == '\n' && condition == 2){
 			number += strtoul(array, NULL, 10);
-			printf("%c%c\n", array[0], array[1]);
 			condition = 0;
 		}else if(symbol == '\n' && condition == 1){
 			array[1] = array[0];
 			number += strtoul(array, NULL, 10);
-			printf("%c%c\n", array[0], array[1]);
 			condition = 0;
 		}
 
